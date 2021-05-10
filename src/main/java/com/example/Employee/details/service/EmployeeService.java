@@ -5,6 +5,9 @@ import java.util.List;
 import com.example.Employee.details.modal.Employee;
 
 public interface EmployeeService {
+
 	List<Employee> getAllEmployees();
+
+	Employee savEmplyee(Employee employee);
 
 }

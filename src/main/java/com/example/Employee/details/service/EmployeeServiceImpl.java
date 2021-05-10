@@ -9,12 +9,16 @@ import com.example.Employee.details.modal.Employee;
 import com.example.Employee.details.repository.EmployeeRepository;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
-	 @Autowired
-	    private EmployeeRepository employeeRepository;
 
-	    @Override
-	    public List < Employee > getAllEmployees() {
-	        return employeeRepository.findAll();
+	@Autowired
+	private EmployeeRepository employeeRepository;
 
-}
+	@Override
+	public List<Employee> getAllEmployees() {
+		return employeeRepository.findAll();
+	}
+	@Override
+	public Employee savEmplyee(Employee employee) {
+		return employeeRepository.save(employee);
+	}
 }
